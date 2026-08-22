@@ -1,0 +1,22 @@
+users:
+  - name: Danish
+    email: danishansari27032005@gmail.com
+    domains:
+      - name: Large Language Models
+        query: "large language models"
+        categories:
+          - cs.CL
+          - cs.AI
+        keywords:
+          - transformer
+          - LLM
+          - reasoning
+          - fine-tuning
+      - name: Computer Vision
+        query: "computer vision"
+        categories:
+          - cs.CV
+        keywords:
+          - image segmentation
+          - object detection
+          - vision transformer
