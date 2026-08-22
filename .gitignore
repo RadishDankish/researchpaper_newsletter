@@ -1,4 +1,3 @@
-data/history.json
 .env
 dry_run_*.html
 __pycache__/
