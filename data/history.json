@@ -27,6 +27,13 @@
       "title": "SRPO: Self-Reflective Policy Optimization for Long-Horizon Reasoning",
       "domain": "Large Language Models",
       "sent_at": "2026-08-25T03:41:21.909564+00:00"
+    },
+    {
+      "email": "danishansari27032005@gmail.com",
+      "paper_id": "2608.24848v1",
+      "title": "BrowserForge: Scaling Web Episode via Parallel Browser Sandboxes",
+      "domain": "Large Language Models",
+      "sent_at": "2026-08-26T03:46:25.635765+00:00"
     }
   ]
 }
