@@ -41,6 +41,13 @@
       "title": "ProgRouter: Online Progress-Guided Orchestration for Multi-Agent LLM Workflows under Quality-Cost Tradeoffs",
       "domain": "Large Language Models",
       "sent_at": "2026-08-27T13:24:14.241056+00:00"
+    },
+    {
+      "email": "danishansari27032005@gmail.com",
+      "paper_id": "2608.27455v1",
+      "title": "CritICL: Inference-Time Weak-to-Strong Generalization from Small Language Model Failure Modes",
+      "domain": "Large Language Models",
+      "sent_at": "2026-08-28T14:44:54.337839+00:00"
     }
   ]
 }
