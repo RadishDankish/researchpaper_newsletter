@@ -48,6 +48,13 @@
       "title": "CritICL: Inference-Time Weak-to-Strong Generalization from Small Language Model Failure Modes",
       "domain": "Large Language Models",
       "sent_at": "2026-08-28T14:44:54.337839+00:00"
+    },
+    {
+      "email": "danishansari27032005@gmail.com",
+      "paper_id": "2608.27420v1",
+      "title": "Boosting LLM Exploration via Weak-Model Guidance in RLVR",
+      "domain": "Large Language Models",
+      "sent_at": "2026-08-29T09:36:15.923056+00:00"
     }
   ]
 }
