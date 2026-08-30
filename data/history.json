@@ -55,6 +55,13 @@
       "title": "Boosting LLM Exploration via Weak-Model Guidance in RLVR",
       "domain": "Large Language Models",
       "sent_at": "2026-08-29T09:36:15.923056+00:00"
+    },
+    {
+      "email": "danishansari27032005@gmail.com",
+      "paper_id": "2608.27348v1",
+      "title": "INTENT-AS-A-TOOL Makes it Easy to Track Agentic Misalignment",
+      "domain": "Large Language Models",
+      "sent_at": "2026-08-30T08:45:01.201859+00:00"
     }
   ]
 }
