@@ -69,6 +69,13 @@
       "title": "NL2AGBench: Benchmarking LLM Auto-Formalization for AlphaGeometry",
       "domain": "Large Language Models",
       "sent_at": "2026-08-31T09:07:46.363419+00:00"
+    },
+    {
+      "email": "danishansari27032005@gmail.com",
+      "paper_id": "2608.30841v1",
+      "title": "HSRM: Hidden-State Reward Models for Test-Time Verification",
+      "domain": "Large Language Models",
+      "sent_at": "2026-09-01T08:09:05.286685+00:00"
     }
   ]
 }
