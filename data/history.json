@@ -76,6 +76,13 @@
       "title": "HSRM: Hidden-State Reward Models for Test-Time Verification",
       "domain": "Large Language Models",
       "sent_at": "2026-09-01T08:09:05.286685+00:00"
+    },
+    {
+      "email": "danishansari27032005@gmail.com",
+      "paper_id": "2609.01573v1",
+      "title": "Scaling Near-Optimal SFT-RL Annotation Budget Allocation from Small to Large LLMs",
+      "domain": "Large Language Models",
+      "sent_at": "2026-09-02T07:28:20.093997+00:00"
     }
   ]
 }
