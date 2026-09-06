@@ -104,6 +104,13 @@
       "title": "Alignment-Free Text-Audiobox for Voice Dubbing and Full-Duplex Dialogue Synthesis",
       "domain": "Large Language Models",
       "sent_at": "2026-09-05T07:15:14.632472+00:00"
+    },
+    {
+      "email": "danishansari27032005@gmail.com",
+      "paper_id": "2609.04159v1",
+      "title": "SENTINEL-RL: Offloading Topological Reasoning from LLM Agents in the Security Operations Center",
+      "domain": "Large Language Models",
+      "sent_at": "2026-09-06T07:27:13.145577+00:00"
     }
   ]
 }
