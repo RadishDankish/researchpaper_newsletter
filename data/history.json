@@ -111,6 +111,13 @@
       "title": "SENTINEL-RL: Offloading Topological Reasoning from LLM Agents in the Security Operations Center",
       "domain": "Large Language Models",
       "sent_at": "2026-09-06T07:27:13.145577+00:00"
+    },
+    {
+      "email": "danishansari27032005@gmail.com",
+      "paper_id": "2609.05235v1",
+      "title": "PRICE: A Systematic Study of LLM Adaptation Choices for Bitcoin Price Forecasting",
+      "domain": "Large Language Models",
+      "sent_at": "2026-09-07T07:43:44.632388+00:00"
     }
   ]
 }
