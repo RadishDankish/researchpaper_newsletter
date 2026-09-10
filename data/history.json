@@ -132,6 +132,13 @@
       "title": "Measuring LLM Sycophancy under Sustained Multi-Turn Pressure",
       "domain": "Large Language Models",
       "sent_at": "2026-09-09T07:42:33.194942+00:00"
+    },
+    {
+      "email": "danishansari27032005@gmail.com",
+      "paper_id": "2609.10441v1",
+      "title": "ConvMem: Convolutional Memory for Long-Context Reasoning",
+      "domain": "Large Language Models",
+      "sent_at": "2026-09-10T07:41:33.657673+00:00"
     }
   ]
 }
