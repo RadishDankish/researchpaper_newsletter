@@ -146,6 +146,13 @@
       "title": "MindTopo: Can Foundation Models Reason in Topological Space?",
       "domain": "Large Language Models",
       "sent_at": "2026-09-11T07:37:51.981343+00:00"
+    },
+    {
+      "email": "danishansari27032005@gmail.com",
+      "paper_id": "2609.11864v1",
+      "title": "RetroThinker: Enabling Retrospective Thinking in Speech LLMs",
+      "domain": "Large Language Models",
+      "sent_at": "2026-09-12T07:29:53.086497+00:00"
     }
   ]
 }
