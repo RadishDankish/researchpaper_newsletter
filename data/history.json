@@ -167,6 +167,13 @@
       "title": "What Breaks Under Pruning in Smart Homes, and When? Evaluating LLM Degradation Across Architectures and Task Complexity",
       "domain": "Large Language Models",
       "sent_at": "2026-09-16T08:07:40.836371+00:00"
+    },
+    {
+      "email": "danishansari27032005@gmail.com",
+      "paper_id": "2609.19144v1",
+      "title": "A Zeroth-Order Paradigm for LLM Preference Alignment",
+      "domain": "Large Language Models",
+      "sent_at": "2026-09-17T08:13:50.411573+00:00"
     }
   ]
 }
