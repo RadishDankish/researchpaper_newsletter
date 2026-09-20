@@ -188,6 +188,13 @@
       "title": "Language-model groups overstate consensus when replaying human deliberation on a reasoning task",
       "domain": "Large Language Models",
       "sent_at": "2026-09-19T07:40:48.496142+00:00"
+    },
+    {
+      "email": "danishansari27032005@gmail.com",
+      "paper_id": "2609.20398v1",
+      "title": "Schema-Anchored Latent Reasoning for Semantic Parsing-Based Knowledge Base Question Answering",
+      "domain": "Large Language Models",
+      "sent_at": "2026-09-20T08:07:59.507213+00:00"
     }
   ]
 }
