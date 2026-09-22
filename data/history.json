@@ -202,6 +202,13 @@
       "title": "LogicTrack: Auditing Reasoning Trajectories of Large Language Models with Formal Logic Solvers",
       "domain": "Large Language Models",
       "sent_at": "2026-09-21T08:24:20.502425+00:00"
+    },
+    {
+      "email": "danishansari27032005@gmail.com",
+      "paper_id": "2609.24894v1",
+      "title": "SLICEChat: Progressive In-Encoder Token Pruning for Whole-Slide Pathology Language Models",
+      "domain": "Large Language Models",
+      "sent_at": "2026-09-22T08:06:09.410737+00:00"
     }
   ]
 }
