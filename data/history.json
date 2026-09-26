@@ -230,6 +230,13 @@
       "title": "A Living Benchmark for Information Retrieval from Electronic Health Records",
       "domain": "Large Language Models",
       "sent_at": "2026-09-25T08:23:07.942165+00:00"
+    },
+    {
+      "email": "danishansari27032005@gmail.com",
+      "paper_id": "2609.30192v1",
+      "title": "SAGE: Mitigating Long-Horizon Reasoning Biases via Topological Guidance",
+      "domain": "Large Language Models",
+      "sent_at": "2026-09-26T08:09:48.673095+00:00"
     }
   ]
 }
