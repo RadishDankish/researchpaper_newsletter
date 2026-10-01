@@ -265,6 +265,13 @@
       "title": "Probability is Not Enough: Exploring and Counting Divergent Tokens for Reasoning Uncertainty Quantification in LLMs",
       "domain": "Large Language Models",
       "sent_at": "2026-09-30T09:10:18.738875+00:00"
+    },
+    {
+      "email": "danishansari27032005@gmail.com",
+      "paper_id": "2609.40124v1",
+      "title": "Debias It Yourself: Teaching LLMs Cognitive Bias Mitigation Interventions",
+      "domain": "Large Language Models",
+      "sent_at": "2026-10-01T09:37:49.873586+00:00"
     }
   ]
 }
