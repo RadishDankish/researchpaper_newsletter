@@ -286,6 +286,13 @@
       "title": "Mimir: Physics-Grounded LLM Agents for Long-Horizon Irrigation Control",
       "domain": "Large Language Models",
       "sent_at": "2026-10-04T09:09:54.189008+00:00"
+    },
+    {
+      "email": "danishansari27032005@gmail.com",
+      "paper_id": "2610.03421v1",
+      "title": "CLIMB: Confidence-Guided Complementary Evidence for Multimodal Retrieval-Augmented Generation",
+      "domain": "Large Language Models",
+      "sent_at": "2026-10-05T09:50:44.129744+00:00"
     }
   ]
 }
