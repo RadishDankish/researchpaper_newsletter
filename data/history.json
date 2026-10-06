@@ -293,6 +293,13 @@
       "title": "CLIMB: Confidence-Guided Complementary Evidence for Multimodal Retrieval-Augmented Generation",
       "domain": "Large Language Models",
       "sent_at": "2026-10-05T09:50:44.129744+00:00"
+    },
+    {
+      "email": "danishansari27032005@gmail.com",
+      "paper_id": "2610.06695v1",
+      "title": "MedPrune: Topology-Efficient Multimodal Multi-Agent Communication Evolution for Medical VQA Tasks",
+      "domain": "Large Language Models",
+      "sent_at": "2026-10-06T09:38:43.270003+00:00"
     }
   ]
 }
