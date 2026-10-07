@@ -300,6 +300,13 @@
       "title": "MedPrune: Topology-Efficient Multimodal Multi-Agent Communication Evolution for Medical VQA Tasks",
       "domain": "Large Language Models",
       "sent_at": "2026-10-06T09:38:43.270003+00:00"
+    },
+    {
+      "email": "danishansari27032005@gmail.com",
+      "paper_id": "2610.08703v1",
+      "title": "Agreement Is Not Validity: Cross-Model LLM Consensus in Diagnosing Student Failure Modes in K-12 Math Tutoring Dialogue",
+      "domain": "Large Language Models",
+      "sent_at": "2026-10-07T09:34:51.652030+00:00"
     }
   ]
 }
