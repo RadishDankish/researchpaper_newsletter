@@ -307,6 +307,13 @@
       "title": "Agreement Is Not Validity: Cross-Model LLM Consensus in Diagnosing Student Failure Modes in K-12 Math Tutoring Dialogue",
       "domain": "Large Language Models",
       "sent_at": "2026-10-07T09:34:51.652030+00:00"
+    },
+    {
+      "email": "danishansari27032005@gmail.com",
+      "paper_id": "2610.10533v1",
+      "title": "EngramEdit: Decoupled Knowledge Updates in LLMs through Conditional Memory",
+      "domain": "Large Language Models",
+      "sent_at": "2026-10-08T09:45:25.833399+00:00"
     }
   ]
 }
