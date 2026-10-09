@@ -314,6 +314,13 @@
       "title": "EngramEdit: Decoupled Knowledge Updates in LLMs through Conditional Memory",
       "domain": "Large Language Models",
       "sent_at": "2026-10-08T09:45:25.833399+00:00"
+    },
+    {
+      "email": "danishansari27032005@gmail.com",
+      "paper_id": "2610.12061v1",
+      "title": "When Should Agents Think? Adaptive Reasoning via Cross-Turn Estimation",
+      "domain": "Large Language Models",
+      "sent_at": "2026-10-09T09:50:38.452011+00:00"
     }
   ]
 }
