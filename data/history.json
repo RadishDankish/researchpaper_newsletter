@@ -321,6 +321,13 @@
       "title": "When Should Agents Think? Adaptive Reasoning via Cross-Turn Estimation",
       "domain": "Large Language Models",
       "sent_at": "2026-10-09T09:50:38.452011+00:00"
+    },
+    {
+      "email": "danishansari27032005@gmail.com",
+      "paper_id": "2610.12056v1",
+      "title": "Structure Tax: How Structured Output affects LLMs Performance",
+      "domain": "Large Language Models",
+      "sent_at": "2026-10-10T09:14:58.950362+00:00"
     }
   ]
 }
