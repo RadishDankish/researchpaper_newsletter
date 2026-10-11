@@ -328,6 +328,13 @@
       "title": "Structure Tax: How Structured Output affects LLMs Performance",
       "domain": "Large Language Models",
       "sent_at": "2026-10-10T09:14:58.950362+00:00"
+    },
+    {
+      "email": "danishansari27032005@gmail.com",
+      "paper_id": "2610.12410v1",
+      "title": "Predicting Alignment Generalization with Value Representations",
+      "domain": "Large Language Models",
+      "sent_at": "2026-10-11T09:31:37.552030+00:00"
     }
   ]
 }
