@@ -1,4 +1,3 @@
-import json
 import time
 
 import requests
@@ -8,32 +7,20 @@ from .config_loader import env
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 
 PROMPT_TEMPLATE = """You are a research paper explainer for a busy technical reader.
-Read the following paper and produce a breakdown in Markdown with EXACTLY these sections, in this order:
+Read the following paper abstract and respond in Markdown with EXACTLY these two sections, in this order:
 
-## TL;DR
-(2-3 sentences)
+## In Simple Terms
+(plain-language explanation of what the paper does and how it works, 3-4 sentences)
 
-## The Problem
-(what problem the paper solves and why it matters)
+## Why It Matters & Future Uses
+(why this paper is worth knowing about, what it enables next, and who should care, 3-4 sentences)
 
-## The Method
-(how they did it, explained simply; use bullet points where helpful)
-
-## Key Results
-(main findings, include concrete numbers/benchmarks if present)
-
-## Limitations
-(caveats, weaknesses, open questions)
-
-## Why It Matters
-(who should care and what it enables next)
-
-Be accurate to the paper. Do not invent results. Keep the whole breakdown under 600 words.
+Be accurate to the abstract. Do not invent results, numbers, or claims that are not stated. Keep the whole response under 250 words.
 
 PAPER TITLE: {title}
 
-PAPER TEXT:
-{text}
+ABSTRACT:
+{abstract}
 """
 
 
@@ -51,25 +38,26 @@ def _call_model(model, prompt):
                 {"role": "system", "content": "You are a precise research assistant."},
                 {"role": "user", "content": prompt},
             ],
+            "reasoning": {"enabled": True},
             "temperature": 0.3,
         },
         timeout=180,
     )
     resp.raise_for_status()
     data = resp.json()
-    return data["choices"][0]["message"]["content"]
+    return data["choices"][0]["message"].get("content") or ""
 
 
-def analyze_paper(title, text):
+def analyze_paper(title, abstract):
     models = [
         m
         for m in (
-            env("OPENROUTER_MODEL_1", "meta-llama/llama-3.3-70b-instruct:free"),
-            env("OPENROUTER_MODEL_2", "google/gemini-2.0-flash-exp:free"),
+            env("OPENROUTER_MODEL_1", "nvidia/nemotron-3-ultra-550b-a55b:free"),
+            env("OPENROUTER_MODEL_2", "nvidia/nemotron-3-super-120b-a12b:free"),
         )
         if m
     ]
-    prompt = PROMPT_TEMPLATE.format(title=title, text=text)
+    prompt = PROMPT_TEMPLATE.format(title=title, abstract=abstract)
     last_error = None
     for i, model in enumerate(models):
         try:
@@ -87,14 +75,8 @@ def analyze_paper(title, text):
 def fallback_breakdown(paper):
     authors = ", ".join(paper.authors[:6])
     return (
-        f"## TL;DR\nAutomatic AI analysis failed today. Here are the raw details.\n\n"
-        f"## Abstract\n{paper.abstract}\n\n"
-        f"## Authors\n{authors}"
+        "## In Simple Terms\nAutomatic AI analysis failed today, so here are the raw details.\n\n"
+        f"{paper.abstract}\n\n"
+        f"## Why It Matters & Future Uses\nAuthors: {authors}\n"
+        f"Read the full paper: {paper.url}"
     )
-
-
-def safe_json_loads(s):
-    try:
-        return json.loads(s)
-    except json.JSONDecodeError:
-        return None

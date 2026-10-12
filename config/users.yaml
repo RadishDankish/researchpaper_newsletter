@@ -4,6 +4,7 @@ users:
     domains:
       - name: Large Language Models
         query: "large language models"
+        sources: [arxiv, huggingface]
         categories:
           - cs.CL
           - cs.AI
@@ -14,9 +15,109 @@ users:
           - fine-tuning
       - name: Computer Vision
         query: "computer vision"
+        sources: [arxiv, huggingface]
         categories:
           - cs.CV
         keywords:
           - image segmentation
           - object detection
           - vision transformer
+      - name: Reinforcement Learning
+        query: "reinforcement learning"
+        sources: [arxiv, huggingface]
+        categories:
+          - cs.LG
+          - cs.AI
+        keywords:
+          - RLHF
+          - policy gradient
+          - reward model
+          - PPO
+          - DPO
+      - name: Robotics
+        query: "robot learning"
+        sources: [arxiv, huggingface]
+        categories:
+          - cs.RO
+        keywords:
+          - manipulation
+          - humanoid
+          - sim-to-real
+          - imitation learning
+      - name: AI Safety and Alignment
+        query: "AI safety alignment"
+        sources: [arxiv, huggingface]
+        categories:
+          - cs.AI
+          - cs.LG
+          - cs.CL
+        keywords:
+          - jailbreak
+          - red teaming
+          - interpretability
+          - hallucination
+          - guardrail
+      - name: NLP and Generation
+        query: "language model"
+        sources: [arxiv, huggingface]
+        categories:
+          - cs.CL
+        keywords:
+          - retrieval augmented
+          - RAG
+          - tokenizer
+          - long context
+          - summarization
+      - name: Generative Images and Video
+        query: "diffusion model"
+        sources: [arxiv, huggingface]
+        categories:
+          - cs.CV
+          - eess.IV
+        keywords:
+          - diffusion
+          - GAN
+          - video generation
+          - text-to-image
+          - flow matching
+      - name: Speech and Audio
+        query: "speech recognition"
+        sources: [arxiv, huggingface]
+        categories:
+          - eess.AS
+          - cs.SD
+        keywords:
+          - ASR
+          - TTS
+          - Whisper
+          - speaker
+          - audio language model
+      - name: Quantum Computing
+        query: "quantum machine learning"
+        sources: [arxiv, huggingface]
+        categories:
+          - quant-ph
+          - cs.CC
+        keywords:
+          - qubit
+          - variational circuit
+          - error correction
+          - quantum advantage
+      - name: Health and Biology
+        query: "computational biology"
+        sources: [arxiv, biorxiv]
+        categories:
+          - q-bio.QC
+          - q-bio.BM
+          - cs.LG
+        keywords:
+          - protein folding
+          - AlphaFold
+          - drug discovery
+          - genomic
+          - single-cell
+          - gene expression
+          - cancer
+          - clinical
+          - neural
+          - brain

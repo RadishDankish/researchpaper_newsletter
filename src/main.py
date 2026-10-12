@@ -3,16 +3,47 @@ import traceback
 from datetime import datetime, timezone
 
 from .analyzer import analyze_paper, fallback_breakdown
-from .config_loader import load_users
-from .discovery import discover, rank_papers
+from .config_loader import CITATIONS_ENABLED, ESTABLISHED_EVERY_NTH_SEND, load_users
+from .discovery import discover, discover_established, rank_papers, select_established
 from .emailer import render_html, send_email
-from .extraction import get_paper_text
 from .selection import History, select_paper
+from .sources import fetch_citations
 
 DRY_RUN = "--dry-run" in sys.argv
 
 
-def process_user(user, history):
+def enrich_citations(papers, label):
+    try:
+        enriched = fetch_citations(papers, enabled=CITATIONS_ENABLED)
+        print(f"[{label}] citations enriched for {enriched}/{len(papers)} papers")
+    except Exception as exc:
+        print(f"[{label}] citation lookup failed, ranking without it: {exc}")
+    return papers
+
+
+def should_use_established(history, email):
+    if ESTABLISHED_EVERY_NTH_SEND <= 0:
+        return False
+    sent_count = len([e for e in history.data.get("sent", []) if e.get("email") == email])
+    return sent_count > 0 and sent_count % ESTABLISHED_EVERY_NTH_SEND == ESTABLISHED_EVERY_NTH_SEND - 1
+
+
+def pick_established(user, history):
+    papers = discover_established(user.domains)
+    if not papers:
+        raise RuntimeError("No established papers discovered")
+    enrich_citations(papers, user.name)
+    paper, domain_name = select_established(papers, user.domains, history.sent_ids(email=user.email))
+    if paper is None:
+        raise RuntimeError("All high-impact candidates were already sent")
+    print(
+        f"[{user.name}] established pick: {paper.title} ({domain_name}, "
+        f"citations={paper.citations}, influential={paper.influential_citations})"
+    )
+    return paper, domain_name
+
+
+def pick_fresh(user, history):
     all_papers = []
     for domain in user.domains:
         try:
@@ -25,16 +56,30 @@ def process_user(user, history):
     if not all_papers:
         raise RuntimeError("No papers discovered from any domain")
 
-    ranked = rank_papers(all_papers, user.domains)
+    unique = {p.id: p for p in all_papers}
+    enrich_citations(list(unique.values()), user.name)
+
+    ranked = rank_papers(list(unique.values()), user.domains)
     paper, domain_name = select_paper(ranked, history.sent_ids(email=user.email))
     if paper is None:
         raise RuntimeError("All candidate papers were already sent")
 
-    print(f"[{user.name}] selected: {paper.title} ({domain_name}, score={score_of(ranked, paper)})")
+    print(
+        f"[{user.name}] selected: {paper.title} ({domain_name}, "
+        f"score={score_of(ranked, paper)}, source={paper.source}, "
+        f"citations={paper.citations}, upvotes={paper.upvotes})"
+    )
+    return paper, domain_name
 
-    text = get_paper_text(paper)
+
+def process_user(user, history):
+    if should_use_established(history, user.email):
+        paper, domain_name = pick_established(user, history)
+    else:
+        paper, domain_name = pick_fresh(user, history)
+
     try:
-        breakdown, model = analyze_paper(paper.title, text)
+        breakdown, model = analyze_paper(paper.title, paper.abstract)
         print(f"[{user.name}] analyzed with model: {model}")
     except Exception as exc:
         print(f"[{user.name}] AI analysis failed, using fallback: {exc}")

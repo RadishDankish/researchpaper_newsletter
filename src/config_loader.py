@@ -8,8 +8,12 @@ load_dotenv()
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HISTORY_PATH = os.path.join(PROJECT_ROOT, "data", "history.json")
-MAX_PAPER_CHARS = 60000
 MAX_ABSTRACT_CHARS = 2000
+HISTORY_MAX_AGE_DAYS = 730
+ESTABLISHED_EVERY_NTH_SEND = 5
+ESTABLISHED_MONTHS = 3
+ESTABLISHED_PER_DOMAIN = 25
+CITATIONS_ENABLED = os.environ.get("CITATIONS_ENABLED", "true").lower() in ("1", "true", "yes")
 
 
 @dataclass
@@ -18,6 +22,7 @@ class Domain:
     query: str
     categories: list = field(default_factory=list)
     keywords: list = field(default_factory=list)
+    sources: list = field(default_factory=lambda: ["arxiv"])
 
 
 @dataclass
@@ -33,6 +38,7 @@ def _parse_domain(raw):
         query=raw.get("query", raw.get("name", "")),
         categories=list(raw.get("categories", [])),
         keywords=[k.lower() for k in raw.get("keywords", [])],
+        sources=[s.lower() for s in raw.get("sources", ["arxiv"])],
     )
 
 
@@ -53,7 +59,9 @@ def load_users(path=None):
 
 
 def env(key, default=None, required=False):
-    value = os.environ.get(key, default)
+    value = os.environ.get(key)
+    if value is None or not value.strip():
+        value = default
     if required and not value:
         raise RuntimeError(f"Missing required environment variable: {key}")
     return value

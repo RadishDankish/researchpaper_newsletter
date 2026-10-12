@@ -16,7 +16,7 @@ EMAIL_TEMPLATE = """<!DOCTYPE html>
         <tr>
           <td style="background:#1a1a2e;color:#ffffff;padding:20px 32px;">
             <h1 style="margin:0;font-size:20px;">📄 Daily Research Digest</h1>
-            <p style="margin:4px 0 0;font-size:13px;color:#a0a0c0;">{domain} &middot; {date}</p>
+            <p style="margin:4px 0 0;font-size:13px;color:#a0a0c0;">{meta}</p>
           </td>
         </tr>
         <tr>
@@ -28,14 +28,12 @@ EMAIL_TEMPLATE = """<!DOCTYPE html>
             </div>
             <p style="margin:24px 0 0;font-size:13px;">
               🔗 <a href="{url}" style="color:#4361ee;">Read the full paper on arXiv</a>
-              &nbsp;&middot;&nbsp;
-              <a href="{pdf_url}" style="color:#4361ee;">PDF</a>
             </p>
           </td>
         </tr>
         <tr>
           <td style="background:#fafafa;border-top:1px solid #eee;padding:14px 32px;font-size:11px;color:#999;">
-            Curated automatically by your research digest agent &middot; Powered by arXiv + OpenRouter
+            Curated automatically by your research digest agent &middot; Powered by arXiv, Hugging Face, bioRxiv &amp; Semantic Scholar
           </td>
         </tr>
       </table>
@@ -50,14 +48,22 @@ def render_html(paper, breakdown_md, domain_name):
         breakdown_md, extensions=["extra", "sane_lists"]
     )
     date = paper.published.strftime("%d %b %Y") if paper.published else ""
+    signals = []
+    if paper.citations:
+        signals.append(f"\U0001f525 {paper.citations:,} citations")
+    if paper.influential_citations:
+        signals.append(f"\U0001f4da {paper.influential_citations} influential")
+    if paper.upvotes:
+        signals.append(f"\U0001f44d {paper.upvotes:,} upvotes")
+    meta = f"{domain_name} &middot; {date}"
+    if signals:
+        meta += " &middot; " + " &middot; ".join(signals)
     return EMAIL_TEMPLATE.format(
-        domain=domain_name,
-        date=date,
+        meta=meta,
         title=paper.title,
         authors=", ".join(paper.authors[:6]) + (" et al." if len(paper.authors) > 6 else ""),
         body=body,
         url=paper.url,
-        pdf_url=paper.pdf_url,
     )
 
 
