@@ -363,6 +363,13 @@
       "title": "'broadSeq', a benchmarking tool to contrast differential gene expression methods and identify when genomic neighbourhood matters",
       "domain": "Health and Biology",
       "sent_at": "2026-10-14T08:15:22.661477+00:00"
+    },
+    {
+      "email": "danishansari27032005@gmail.com",
+      "paper_id": "2610.18870v2",
+      "title": "MiniDog: Dog-Breed Text-to-image Flow Matching from Pretraining to Fine-Tuning on 4 Consumer GPUs",
+      "domain": "Generative Images and Video",
+      "sent_at": "2026-10-15T07:52:37.201555+00:00"
     }
   ]
 }
