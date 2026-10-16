@@ -370,6 +370,13 @@
       "title": "MiniDog: Dog-Breed Text-to-image Flow Matching from Pretraining to Fine-Tuning on 4 Consumer GPUs",
       "domain": "Generative Images and Video",
       "sent_at": "2026-10-15T07:52:37.201555+00:00"
+    },
+    {
+      "email": "danishansari27032005@gmail.com",
+      "paper_id": "2610.22282v1",
+      "title": "Routing Policy Optimization for Online Diffusion Reinforcement Learning",
+      "domain": "Generative Images and Video",
+      "sent_at": "2026-10-16T07:49:06.331534+00:00"
     }
   ]
 }
