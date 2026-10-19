@@ -391,6 +391,13 @@
       "title": "Whole-Body Dexterity",
       "domain": "Robotics",
       "sent_at": "2026-10-18T07:36:22.373247+00:00"
+    },
+    {
+      "email": "danishansari27032005@gmail.com",
+      "paper_id": "2610.22975v1",
+      "title": "Sink-Sparse Hybrid Attention for Efficient Inference in T2I/T2V Diffusion Transformers",
+      "domain": "Generative Images and Video",
+      "sent_at": "2026-10-19T08:19:19.955367+00:00"
     }
   ]
 }
