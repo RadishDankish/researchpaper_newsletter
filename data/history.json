@@ -398,6 +398,13 @@
       "title": "Sink-Sparse Hybrid Attention for Efficient Inference in T2I/T2V Diffusion Transformers",
       "domain": "Generative Images and Video",
       "sent_at": "2026-10-19T08:19:19.955367+00:00"
+    },
+    {
+      "email": "danishansari27032005@gmail.com",
+      "paper_id": "2610.26754v1",
+      "title": "TokenGate: Adapting LLMs for Fast and Memory-Efficient Prefill with Learned Token Pruning",
+      "domain": "Large Language Models",
+      "sent_at": "2026-10-20T08:03:50.909902+00:00"
     }
   ]
 }
