@@ -405,6 +405,13 @@
       "title": "TokenGate: Adapting LLMs for Fast and Memory-Efficient Prefill with Learned Token Pruning",
       "domain": "Large Language Models",
       "sent_at": "2026-10-20T08:03:50.909902+00:00"
+    },
+    {
+      "email": "danishansari27032005@gmail.com",
+      "paper_id": "2610.24572v1",
+      "title": "ASR Personalization in Pathological Voice: Accuracy, Efficiency, and Duration Effects",
+      "domain": "Speech and Audio",
+      "sent_at": "2026-10-21T08:09:09.628642+00:00"
     }
   ]
 }
